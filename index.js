@@ -3,8 +3,6 @@ import express, { response } from "express"; // "type": "module"
 import { MongoClient } from "mongodb";
 const app = express();
 import * as dotenv from "dotenv";
-import { request } from "http";
-// import { request } from "http";
 dotenv.config();
 import cors from 'cors';
 import bcrypt from 'bcrypt';
@@ -27,9 +25,9 @@ console.log("Mongo is Connected!!!");
 app.use(express.json());
 app.use(cors());
 
-// app.get("/", function (request, response) {
-// response.send("🙋‍♂️, 🌏 🎊✨🤩");
-// });
+app.get("/", function (request, response) {
+response.send("🙋‍♂️, 🌏 🎊✨🤩");
+});
 
 
 // POST - students details
