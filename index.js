@@ -50,13 +50,13 @@ app.get("/students", async (request, response) => {
 //     response.send(students);
 // });
 
-// // DELETE - students by id
-// app.delete("/students/:id", async (request, response) => {
-//     const {id} = request.params;
-//     const result = await client.db("capstone").collection("students").deleteOne({ _id: ObjectId(id) });
-//     console.log(result);
-//     result.deletedCount > 0 ? response.send({message : "student deleted successfully"}) : response.status(404).send({message : "student details not found"});
-// });
+// DELETE - students by id
+app.delete("/students/:id", async (request, response) => {
+    const {id} = request.params;
+    const result = await client.db("capstone").collection("students").deleteOne({ _id: ObjectId(id) });
+    console.log(result);
+    result.deletedCount > 0 ? response.send({message : "student deleted successfully"}) : response.status(404).send({message : "student details not found"});
+});
 
 
 //SIGNUP - STUDENTS
