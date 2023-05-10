@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", function (request, response) {
-response.send("🙋‍♂️, 🌏 🎊✨🤩");
+response.send("Hello");
 });
 
 
