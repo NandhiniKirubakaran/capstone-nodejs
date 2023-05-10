@@ -25,9 +25,9 @@ console.log("Mongo is Connected!!!");
 app.use(express.json());
 app.use(cors());
 
-app.get("/", function (request, response) {
-response.send("Hello");
-});
+// app.get("/", function (request, response) {
+// response.send("Hello");
+// });
 
 
 // POST - students details
